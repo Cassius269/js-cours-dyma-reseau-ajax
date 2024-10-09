@@ -12,7 +12,9 @@ console.log(chargeUtileUser);
 
 fetch('https://jsonplaceholder.typicode.com/users/',{
     method: 'POST', // création d'une nouvelle donnée
-    headers: { 'Content-Type': 'application/json'},// Envoi d'un objet au format JSON
+    headers: { 
+        'Content-Type': 'application/json'// Envoi d'un objet au format JSON
+    },
     body: chargeUtileUser
 })
 .then(response => response.json())// depuis la réponse, transformer l'objet JSON nouvellement créé au format d'objet classique
@@ -25,7 +27,9 @@ async function createNewUser(chargeUtile){
     try {
       const promise = await fetch('https://jsonplaceholder.typicode.com/users/',{
         method: 'POST',
-        headers: { 'Content-Type': 'application/json'},
+        headers: { 
+            'Content-Type': 'application/json'
+        },
         body: chargeUtileUser
     });
 
